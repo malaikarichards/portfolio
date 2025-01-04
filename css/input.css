@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  background-color: #F8F8FF;
+}
+
+.cta {
+  min-height: 180px;
+}
+
+header {
+  margin-top: 60px;
+}
+
+header .navbar-brand {
+  color: #011627;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -9.28px;
+}
+
+section.hero {
+  background: url("images/hero-bg.svg");
+}
+
+section.projects {
+  background: url("images/projects-bg.svg");
+}
+
+section.ribbon {
+  background: radial-gradient(1485.92% 119.11% at 0% 17.65%, #A471FE 10.94%, #75B6F8 81.77%);
+}/*# sourceMappingURL=input.css.map */

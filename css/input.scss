@@ -1,11 +1,242 @@
+// Google FOnts Import
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+// Colors
+$white: #fff;
+$lavender: #F8F8FF;
+$purple: #a471fe;
+$font-dark: #011627;
+$grad: radial-gradient(169% 200% at -37% 55.65%, #A471FE 10.94%, #75B6F8 81.77%);
+
+
+// Fonts
+$font-mon: "Montserrat", Arial, Helvetica, sans-serif;
+@mixin font-gradient{
+  background: $grad;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Headings
+.h1{
+  font-size: 64px;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include font-gradient;
+}
+.h2{
+  font-size: 48px;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include font-gradient;
+}
+.h3{
+  font-size: 25.89px;
+  font-weight: 600;
+}
+.h4{
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+// Global
 body{
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: $font-mon;
+  background-color: $lavender;
+  color: $font-dark;
+  position: relative;
 }
-.cta{
-  min-height: 180px;
+.btn{
+  min-width: 180px;
+  font-size: 25.89px;
+  font-weight: 600;
+  padding: 10px 20px;
+  &.btn-primary{
+    background: $grad;
+    border-radius: 8px;
+    border: none;
+    color: $white;
+  }
+  &.btn-outline{
+    border: 2px solid #8a97fa;
+    border-radius: 8px;
+    color: $white;
+    @include font-gradient;
+  }
+  &.btn-sm{
+    padding: 8px 20px;
+    font-size: 20px;
+  }
 }
-header{
-  margin-top: 60px;
+.glass-card{
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.60);
+  box-shadow: 0px 0px 19px 0px rgba(54, 40, 85, 0.50);
+  backdrop-filter: blur(6px);
+}
+.img-fluid, .card{
+  box-shadow: 0px 25px 64px -19px rgba(141, 109, 211, 0.50);
+}
+
+// Nav
+nav.navbar{
+  padding: 60px 0px;
+  .navbar-brand{
+    width: 200px;
+    span{
+      font-family: $font-mon;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -9.28px;
+
+      background: radial-gradient(100% 100% at 0% 55.65%, #A471FE 10.94%, #75B6F8 81.77%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      width: 50px;
+      display: inline-block;
+    }
+  }
+  .nav-item{
+    .nav-link{
+      color: $font-dark;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
+
+// Hero
+section.hero{
+  background: url('../images/hero-bg.svg') no-repeat center bottom / cover;
+  min-height: calc(100vh - 60px);
+  padding-bottom: 30px;
+  margin-bottom: -1px;
+  .dots-container{
+    position: relative;
+    margin-top: 50px;
+    left: -95px;
+    z-index: 0;  
+
+    &::before{
+      content: "";
+      display: block;
+      background: url('../images/gradient-dots-grid.svg') no-repeat top/contain;
+      position: absolute;
+      right: -140px;
+      top: -137px;
+      width: 270px;
+      height: 270px;
+      z-index: -1;
+    }
+  }
+}
+
+// Projects
+section.projects{
+  background: url('../images/projects-bg.svg') no-repeat center top / cover;
+  padding-top: 30px;
+  nav{
+    padding-left: 24px;
+    ul.nav{
+      border-left: 1px solid $font-dark;
+      padding: 0;
+      
+      a{
+        color: $font-dark;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 16px 24px;
+        position: relative;
+        &.active:before{
+          content: "";
+          position: absolute;
+          display: block;
+          width: 5px;
+          background: radial-gradient(264% 104% at 0% 100%, #A471FE 10.94%, #75B6F8 81.77%);
+          height: 40px;
+          left: -3px;
+          top: 12px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .project-slider{
+    margin-bottom: 60px;
+    article{
+      position: relative;  
+      margin-bottom: 100px;
+      .glass-card{
+        position: relative;
+        z-index: 2;
+      }
+      .article-images{
+        right: 0px;
+        position: absolute;
+        .tools-icons{
+          .icon-bg{    
+            background: $grad;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+                
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Ribbon
+section.ribbon{
+  background: $grad;
+  margin-bottom: 60px;
+}
+
+// Experience
+section.experience{
+  margin-bottom: 100px;
+  .card{
+    box-shadow: 0px 0px 24px 2px rgba(65, 52, 92, 0.50);
+  }
+
+}
+// About
+section.about{
+  background: $grad;
+
+  padding: 124px 0 160px;
+  .h2{
+    background: none;
+    -webkit-text-fill-color: white;
+    color: $white;
+  }
+  .sm-links a{
+    margin: 0 8px;
+    color: $white;
+  }
+}
+
+// Footer
+footer{
+  position: absolute;
+  background: rgba(255, 255, 255, 0.60);
+  box-shadow: 0px 0px 19px 0px rgba(54, 40, 85, 0.50);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  bottom: 0;
+  p{
+    padding: 30px;
+    margin: 0;
+  }
 }
