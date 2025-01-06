@@ -199,7 +199,8 @@ section.projects .swiper-slide {
 section.projects .swiper-scrollbar {
   left: 14px;
   width: 1px;
-  color: #011627;
+  background-color: #011627;
+  max-height: 200px;
 }
 section.projects .swiper-scrollbar .swiper-scrollbar-drag {
   width: 5px;
