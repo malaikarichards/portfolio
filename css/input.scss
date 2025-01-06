@@ -167,15 +167,9 @@ section.projects{
     ul.nav{
       border-left: 1px solid $font-dark;
       padding: 0;
-      
-      a{
-        color: $font-dark;
-        font-size: 20px;
-        font-weight: 600;
-        padding: 16px 24px;
-        position: relative;
-        &.active:before{
-          content: "";
+      position: relative;
+      &::before{
+        content: "";
           position: absolute;
           display: block;
           width: 5px;
@@ -184,7 +178,25 @@ section.projects{
           left: -3px;
           top: 12px;
           border-radius: 5px;
-        }
+      }
+      
+      a{
+        color: $font-dark;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 16px 24px;
+        position: relative;
+        // &.active:before{
+        //   content: "";
+        //   position: absolute;
+        //   display: block;
+        //   width: 5px;
+        //   background: radial-gradient(264% 104% at 0% 100%, #A471FE 10.94%, #75B6F8 81.77%);
+        //   height: 40px;
+        //   left: -3px;
+        //   top: 12px;
+        //   border-radius: 5px;
+        // }
       }
     }
   }
@@ -193,7 +205,7 @@ section.projects{
     margin-bottom: 60px;
     article{
       position: relative;  
-      margin-bottom: 100px;
+      margin: 48px 48px 200px;
       .glass-card{
         position: relative;
         z-index: 2;
@@ -217,6 +229,20 @@ section.projects{
       }
     }
   }
+  .swiper-slide {
+    height: auto !important;
+  }
+  .swiper-scrollbar{
+    left: 14px;
+    width: 1px;
+    color: $font-dark;
+    .swiper-scrollbar-drag{
+      width: 5px;
+      left: -2px;
+      background: radial-gradient(264% 104% at 0% 100%, #A471FE 10.94%, #75B6F8 81.77%);
+    }
+  }
+  
 }
 
 // Ribbon
@@ -234,6 +260,7 @@ section.ribbon{
   .swiper-wrapper {
     transition-timing-function: linear !important;
   }
+  
 }
 
 // Experience

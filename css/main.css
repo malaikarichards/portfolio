@@ -148,15 +148,9 @@ section.projects nav {
 section.projects nav ul.nav {
   border-left: 1px solid #011627;
   padding: 0;
-}
-section.projects nav ul.nav a {
-  color: #011627;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 16px 24px;
   position: relative;
 }
-section.projects nav ul.nav a.active:before {
+section.projects nav ul.nav::before {
   content: "";
   position: absolute;
   display: block;
@@ -167,12 +161,19 @@ section.projects nav ul.nav a.active:before {
   top: 12px;
   border-radius: 5px;
 }
+section.projects nav ul.nav a {
+  color: #011627;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px 24px;
+  position: relative;
+}
 section.projects .project-slider {
   margin-bottom: 60px;
 }
 section.projects .project-slider article {
   position: relative;
-  margin-bottom: 100px;
+  margin: 48px 48px 200px;
 }
 section.projects .project-slider article .glass-card {
   position: relative;
@@ -191,6 +192,19 @@ section.projects .project-slider article .article-images .tools-icons .icon-bg {
   align-items: center;
   justify-content: center;
   margin-left: 8px;
+}
+section.projects .swiper-slide {
+  height: auto !important;
+}
+section.projects .swiper-scrollbar {
+  left: 14px;
+  width: 1px;
+  color: #011627;
+}
+section.projects .swiper-scrollbar .swiper-scrollbar-drag {
+  width: 5px;
+  left: -2px;
+  background: radial-gradient(264% 104% at 0% 100%, #A471FE 10.94%, #75B6F8 81.77%);
 }
 
 section.ribbon {
