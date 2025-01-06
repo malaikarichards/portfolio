@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Malaika Richards' Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://kit.fontawesome.com/09b26ae6fa.js" crossorigin="anonymous"></script>
     <link href="./css/main.css" rel="stylesheet">
   </head>
@@ -15,47 +16,47 @@
       <section id="intro" class="hero">
         <div class="container">
 
-          <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <nav class="navbar navbar-expand-lg py-5 mb-4">
+            <div class="container-fluid position-relative">
+              <button class="border-0 end-0 navbar-toggler position-absolute top-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarToggler">
                 <a class="navbar-brand" href="#"><span>MR</span></a>
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link px-3" href="#intro">Home</a>
+                    <a class="nav-link p-3" href="#intro">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link px-3" href="#projects">Projects</a>
+                    <a class="nav-link p-3" href="#projects">Projects</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link px-3" href="#experience">Experience</a>
+                    <a class="nav-link p-3" href="#experience">Experience</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link px-3" href="#about">About Me</a>
+                    <a class="nav-link p-3" href="#about">About Me</a>
                   </li>
                 </ul>
                 <a class="btn btn-primary btn-sm" href="#">Contact Me</a>
               </div>
             </div>
           </nav>
-          <div class="row">
-            <div class="headshot col-lg-5 offset-lg-1">
+          <div class="row justify-content-center">
+            <div class="headshot col-lg-5">
               <img class="img-fluid rounded-3" src="https://placehold.co/555x698/011627/F8F8FF?font=montserrat&text=Headshot" alt="Malaika Richards' Headshot">
             </div>
-            <div class="col-lg-5 d-flex flex-column justify-content-center">
+            <div class="col-lg-6 d-flex flex-column justify-content-center">
 
-              <div class="dots-container"> n   
-                <div class="glass-card p-5">
-                  <p>Hi! I'm</p>
+              <div class="dots-container">
+                <div class="glass-card p-3 p-sm-4 p-lg-5">
+                  <p class="mb-0">Hi! I'm</p>
                   <h1 class="h1">Malaika <br>Richards</h1>
-                  <p>and I'm a Web Developer</p>
+                  <p class="mb-4">and I'm a Web Developer</p>
                   <div class="row">
-                    <div class="col-lg-6">
-                      <a class="btn btn-primary d-block" href="#projects">Projects</a>
+                    <div class="col-sm-6">
+                      <a class="btn btn-primary d-block mb-3" href="#projects">Projects</a>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                       <a class="btn btn-outline d-block" href="#experience">Expereince</a>
                     </div>
                   </div>
@@ -74,7 +75,7 @@
             </div>
             <div class="project-slider col-12 row">
               <nav class="col-lg-3">
-                <ul class="nav flex-column">
+                <ul class="nav flex-column mb-5">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Project 1</a>
                   </li>
@@ -114,7 +115,7 @@
                   <p class="m-4"><em>Created while at <strong>USF</strong></em></p>
                 </div>
                 <div class="col-lg-7 article-images">
-                  <div class="tools-icons row fa-xl text-white justify-content-end g-2 mb-2">
+                  <div class="tools-icons row fa-xl text-white justify-content-lg-end g-2 mb-2">
                     <div class="icon-bg"><i class="fa-brands fa-html5"></i></div>
                     <div class="icon-bg"><i class="fa-brands fa-sass"></i></div>
                     <div class="icon-bg"><i class="fa-brands fa-square-js"></i></div>
@@ -137,19 +138,36 @@
           </div>
         </div>
       </section>
+      
       <section id="langs" class="ribbon fa-4x text-white d-flex justify-content-around p-3">
-        <i class="fa-brands fa-html5"></i>
-        <i class="fa-brands fa-sass"></i>
-        <i class="fa-brands fa-square-js"></i>
-        <i class="fa-brands fa-bootstrap"></i>
-        <i class="fa-brands fa-hubspot"></i>
-        <i class="fa-brands fa-wordpress-simple"></i>
-        <i class="fa-brands fa-gulp"></i>
-        <i class="fa-brands fa-bitbucket"></i>
-        <i class="fa-brands fa-github-alt"></i>
-        <i class="fa-brands fa-python"></i>
-        <i class="fa-brands fa-java"></i>
+        <div class="ticker">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><i class="fa-brands fa-html5"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-sass"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-square-js"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-bootstrap"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-hubspot"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-wordpress-simple"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-gulp"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-bitbucket"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-github-alt"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-python"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-java"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-html5"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-sass"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-square-js"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-bootstrap"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-hubspot"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-wordpress-simple"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-gulp"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-bitbucket"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-github-alt"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-python"></i></div>
+            <div class="swiper-slide"><i class="fa-brands fa-java"></i></div>
+          </div>
+        </div>
       </section>
+
       <section id="experience" class="experience">
         <div class="container">
           <div class="row justify-content-center">
@@ -214,7 +232,7 @@
       <section id="about" class="about">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4 offset-lg-1 ">
+            <div class="col-lg-4 offset-lg-1 mb-5">
               <img class="img-fluid rounded-3" src="https://placehold.co/440x410/011627/F8F8FF?font=montserrat&text=Headshot" alt="Malaika Richards' Headshot">
             </div>
             <div class="offset-lg-1 col-lg-5 text-white">
@@ -240,8 +258,9 @@
         <p class="text-center">Copyright © 2025 | Malaika Richards</p>
       </div>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 

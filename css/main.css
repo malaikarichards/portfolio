@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .h1 {
-  font-size: 64px;
+  font-size: 58px;
   font-weight: 600;
   text-transform: uppercase;
   background: radial-gradient(169% 200% at -37% 55.65%, #A471FE 10.94%, #75B6F8 81.77%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-left: -3px;
+  margin-bottom: 0;
 }
 
 .h2 {
@@ -37,9 +39,13 @@ body {
   position: relative;
 }
 
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .btn {
-  min-width: 180px;
-  font-size: 25.89px;
+  font-size: 20px;
   font-weight: 600;
   padding: 10px 20px;
 }
@@ -59,8 +65,8 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .btn.btn-sm {
-  padding: 8px 20px;
-  font-size: 20px;
+  padding: 4px 20px;
+  font-size: 16px;
 }
 
 .glass-card {
@@ -74,11 +80,14 @@ body {
   box-shadow: 0px 25px 64px -19px rgba(141, 109, 211, 0.5);
 }
 
-nav.navbar {
-  padding: 60px 0px;
+nav.navbar .navbar-toggler-icon {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28164, 113, 254, 1.0%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+nav.navbar .navbar-toggler:focus {
+  box-shadow: none;
 }
 nav.navbar .navbar-brand {
-  width: 200px;
+  width: 130px;
 }
 nav.navbar .navbar-brand span {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -96,15 +105,20 @@ nav.navbar .navbar-brand span {
 }
 nav.navbar .nav-item .nav-link {
   color: #011627;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
 }
 
 section.hero {
   background: url("../images/hero-bg.svg") no-repeat center bottom/cover;
   min-height: calc(100vh - 60px);
-  padding-bottom: 30px;
+  padding-bottom: 80px;
   margin-bottom: -1px;
+  overflow-x: hidden;
+}
+section.hero .glass-card p {
+  font-size: 24px;
+  font-weight: 500;
 }
 section.hero .dots-container {
   position: relative;
@@ -117,8 +131,8 @@ section.hero .dots-container::before {
   display: block;
   background: url("../images/gradient-dots-grid.svg") no-repeat top/contain;
   position: absolute;
-  right: -140px;
-  top: -137px;
+  right: -82px;
+  top: -79px;
   width: 270px;
   height: 270px;
   z-index: -1;
@@ -183,6 +197,12 @@ section.ribbon {
   background: radial-gradient(169% 200% at -37% 55.65%, #A471FE 10.94%, #75B6F8 81.77%);
   margin-bottom: 60px;
 }
+section.ribbon .swiper-slide {
+  width: fit-content;
+}
+section.ribbon .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
 
 section.experience {
   margin-bottom: 100px;
@@ -193,12 +213,16 @@ section.experience .card {
 
 section.about {
   background: radial-gradient(169% 200% at -37% 55.65%, #A471FE 10.94%, #75B6F8 81.77%);
+  overflow-x: hidden;
   padding: 124px 0 160px;
 }
 section.about .h2 {
   background: none;
   -webkit-text-fill-color: white;
   color: #fff;
+}
+section.about img {
+  text-align: center;
 }
 section.about .sm-links a {
   margin: 0 8px;
@@ -216,6 +240,42 @@ footer {
 footer p {
   padding: 30px;
   margin: 0;
+}
+
+@media (max-width: 991px) {
+  .headshot img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50% !important;
+  }
+  section.hero .dots-container {
+    left: unset;
+  }
+  section.projects .project-slider article .article-images {
+    position: static;
+  }
+  section.projects .project-slider article .article-images .w-100 {
+    display: none;
+  }
+  section.projects .project-slider article .article-images .project-image {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .h1 {
+    font-size: 42px;
+  }
+  .h2 {
+    font-size: 36px;
+  }
+  section.hero .glass-card p {
+    font-size: 22px;
+  }
+  section.projects nav ul.nav a {
+    font-size: 18px;
+    padding: 14px 24px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
