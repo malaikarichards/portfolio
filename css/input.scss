@@ -205,13 +205,17 @@ section.projects{
     margin-bottom: 60px;
     article{
       position: relative;  
-      margin: 48px 48px 200px;
+      margin: 48px 48px 100px;
+      // .text{
+      //   margin-bottom: 100px;
+      // }
       .glass-card{
         position: relative;
         z-index: 2;
       }
       .article-images{
         right: 0px;
+        bottom: -50px;
         position: absolute;
         .tools-icons{
           .icon-bg{    
@@ -309,7 +313,13 @@ footer{
   }
 }
 
+
 // Responsive
+@media (max-width: 1200px) {
+  .article-images{
+    bottom: 114px;
+  }
+}
 @media (max-width: 991px) {
   
   .headshot img{
@@ -330,6 +340,7 @@ footer{
       text-align: center;
     }
   }
+  
 }
 
 @media (max-width: 768px){

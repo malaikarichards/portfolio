@@ -173,7 +173,7 @@ section.projects .project-slider {
 }
 section.projects .project-slider article {
   position: relative;
-  margin: 48px 48px 200px;
+  margin: 48px 48px 100px;
 }
 section.projects .project-slider article .glass-card {
   position: relative;
@@ -181,6 +181,7 @@ section.projects .project-slider article .glass-card {
 }
 section.projects .project-slider article .article-images {
   right: 0px;
+  bottom: -50px;
   position: absolute;
 }
 section.projects .project-slider article .article-images .tools-icons .icon-bg {
@@ -260,6 +261,11 @@ footer p {
   margin: 0;
 }
 
+@media (max-width: 1200px) {
+  .article-images {
+    bottom: 114px;
+  }
+}
 @media (max-width: 991px) {
   .headshot img {
     width: 200px;
