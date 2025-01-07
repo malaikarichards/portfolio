@@ -224,6 +224,9 @@ section.projects{
             align-items: center;
             justify-content: center;
             margin-left: 8px;
+            a{
+              color: $white;
+            }
           }
         }
       }

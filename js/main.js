@@ -16,13 +16,13 @@
 const ticker = new Swiper('.ticker', {
   spaceBetween: 40,
   loop: true,
-  freeMode: true,
+  // freeMode: true,
   autoplay: {
     delay: 1,
     waitForTransition: true,
     stopOnLastSlide: false,
-    pauseOnMouseEnter: true,
-    disableOnInteraction: false,
+    // pauseOnMouseEnter: true,
+    // disableOnInteraction: false,
   },
   speed: 2000,
   loop: true,
@@ -42,11 +42,8 @@ const projectSwiper = new Swiper('.project-swiper', {
 });
 
 $(document).ready(function(){
-  let popoverTriggerList = [].slice.call( 
-    document.querySelectorAll('[data-bs-toggle="popover"]')) 
-  
-  let popoverList = 
-  popoverTriggerList.map(function (popoverTriggerEl) { 
-    return new bootstrap.Popover(popoverTriggerEl) 
-  }) 
+  let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+  let popoverList = popoverTriggerList.map(function (popoverTriggerEl) { 
+    return new bootstrap.Popover(popoverTriggerEl);
+  });
 });

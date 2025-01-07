@@ -193,6 +193,9 @@ section.projects .project-slider article .article-images .tools-icons .icon-bg {
   justify-content: center;
   margin-left: 8px;
 }
+section.projects .project-slider article .article-images .tools-icons .icon-bg a {
+  color: #fff;
+}
 section.projects .swiper-slide {
   height: auto !important;
 }
