@@ -197,14 +197,40 @@ section.projects .project-slider article .article-images .tools-icons .icon-bg {
 section.projects .project-slider article .article-images .tools-icons .icon-bg a {
   color: #fff;
 }
+section.projects .project-slider article .article-images video {
+  box-shadow: 0px 0px 19px 0px rgba(54, 40, 85, 0.5);
+  background-color: black;
+}
 section.projects .swiper-slide {
   height: auto !important;
+  padding-top: 20px;
 }
 section.projects .swiper-scrollbar {
   left: 14px;
   width: 1px;
   background-color: #011627;
   max-height: 200px;
+  top: calc(50% - 100px);
+}
+section.projects .swiper-scrollbar::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 1px;
+  background-color: #011627;
+  display: block;
+  left: 0px;
+  top: -20px;
+}
+section.projects .swiper-scrollbar::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 1px;
+  background-color: #011627;
+  display: block;
+  left: 0px;
+  bottom: -20px;
 }
 section.projects .swiper-scrollbar .swiper-scrollbar-drag {
   width: 5px;
