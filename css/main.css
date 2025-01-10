@@ -205,14 +205,14 @@ section.projects .swiper-slide {
   height: auto !important;
   padding-top: 20px;
 }
-section.projects .swiper-scrollbar {
+section.projects .swiper-scrollbar-vertical {
   left: 14px;
   width: 1px;
   background-color: #011627;
   max-height: 200px;
   top: calc(50% - 100px);
 }
-section.projects .swiper-scrollbar::before {
+section.projects .swiper-scrollbar-vertical::before {
   content: "";
   position: absolute;
   height: 20px;
@@ -222,7 +222,7 @@ section.projects .swiper-scrollbar::before {
   left: 0px;
   top: -20px;
 }
-section.projects .swiper-scrollbar::after {
+section.projects .swiper-scrollbar-vertical::after {
   content: "";
   position: absolute;
   height: 20px;
@@ -232,9 +232,41 @@ section.projects .swiper-scrollbar::after {
   left: 0px;
   bottom: -20px;
 }
-section.projects .swiper-scrollbar .swiper-scrollbar-drag {
+section.projects .swiper-scrollbar-vertical .swiper-scrollbar-drag {
   width: 5px;
   left: -2px;
+  background: radial-gradient(264% 104% at 0% 100%, #A471FE 10.94%, #75B6F8 81.77%);
+}
+section.projects .swiper-scrollbar-horizontal {
+  top: 20px;
+  left: 25%;
+  width: 50%;
+  height: 1px;
+  background-color: #011627;
+}
+section.projects .swiper-scrollbar-horizontal::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background-color: #011627;
+  display: block;
+  top: 0px;
+  left: -20px;
+}
+section.projects .swiper-scrollbar-horizontal::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background-color: #011627;
+  display: block;
+  top: 0px;
+  right: -20px;
+}
+section.projects .swiper-scrollbar-horizontal .swiper-scrollbar-drag {
+  height: 5px;
+  top: -2px;
   background: radial-gradient(264% 104% at 0% 100%, #A471FE 10.94%, #75B6F8 81.77%);
 }
 
@@ -293,6 +325,12 @@ footer p {
   }
 }
 @media (max-width: 991px) {
+  nav.navbar {
+    margin-bottom: -40px !important;
+  }
+  nav.navbar .collapse {
+    margin-bottom: 40px;
+  }
   .headshot img {
     width: 200px;
     height: 200px;
@@ -305,11 +343,17 @@ footer p {
   section.projects .project-slider article .article-images {
     position: static;
   }
-  section.projects .project-slider article .article-images .w-100 {
-    display: none;
-  }
   section.projects .project-slider article .article-images .project-image {
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  section.projects .project-slider article {
+    position: relative;
+    margin: 48px 8px 100px;
+  }
+  section.projects .project-slider article .article-images .w-100 {
+    display: none;
   }
 }
 @media (max-width: 576px) {

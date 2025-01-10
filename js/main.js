@@ -30,15 +30,22 @@ const ticker = new Swiper('.ticker', {
 });
 
 const projectSwiper = new Swiper('.project-swiper', {
-  direction: 'vertical',
-  scrollbar:  {
-    el: ".swiper-scrollbar",
-    draggable: true,
-    dragSize: 40
-  },
   slidesPerView: 1,
   loop: true,
   autoHeight: true,
+
+  scrollbar:  {
+    el: ".swiper-scrollbar",
+    draggable: true,
+    dragSize:
+     40
+  },
+  breakpoints: {
+    768: {
+      direction: 'vertical',
+    }
+  }
+  
 });
 
 $(document).ready(function(){

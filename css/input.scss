@@ -1,4 +1,4 @@
-// Google FOnts Import
+// Google Fonts Import
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 // Colors
@@ -247,7 +247,7 @@ section.projects{
     height: auto !important;
     padding-top: 20px;
   }
-  .swiper-scrollbar{
+  .swiper-scrollbar-vertical{
     left: 14px;
     width: 1px;
     background-color: $font-dark;
@@ -280,6 +280,39 @@ section.projects{
       background: radial-gradient(264% 104% at 0% 100%, #A471FE 10.94%, #75B6F8 81.77%);
     }
     
+  }
+  .swiper-scrollbar-horizontal{
+    top: 20px;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background-color: $font-dark;
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: #011627;
+      display: block;
+      top: 0px;
+      left: -20px;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: #011627;
+      display: block;
+      top: 0px;
+      right: -20px;
+    }
+    .swiper-scrollbar-drag{
+      height: 5px;
+      top: -2px;
+      background: radial-gradient(264% 104% at 0% 100%, #A471FE 10.94%, #75B6F8 81.77%);
+    }
   }
   
 }
@@ -352,7 +385,12 @@ footer{
   }
 }
 @media (max-width: 991px) {
-  
+  nav.navbar{
+    margin-bottom: -40px !important;
+    .collapse{
+      margin-bottom: 40px;
+    }
+  }
   .headshot img{
     width: 200px;
     height: 200px;
@@ -364,9 +402,9 @@ footer{
   }
   section.projects .project-slider article .article-images{
     position: static;
-    .w-100{
-      display: none;
-    }
+    // .w-100{
+    //   display: none;
+    // }
     .project-image{
       text-align: center;
     }
@@ -375,7 +413,13 @@ footer{
 }
 
 @media (max-width: 768px){
-
+  section.projects .project-slider article {
+    position: relative;
+    margin: 48px 8px 100px;
+  }
+  section.projects .project-slider article .article-images .w-100{
+    display: none;
+  }
 }
 
 @media (max-width: 576px){
