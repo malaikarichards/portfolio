@@ -127,7 +127,7 @@ nav.navbar{
 
 // Hero
 section.hero{
-  background: url('../images/hero-bg.svg') no-repeat center bottom / cover;
+  background: url('../assets/hero-bg.svg') no-repeat center bottom / cover;
   min-height: calc(100vh - 60px);
   padding-bottom: 80px;
   margin-bottom: -1px;
@@ -147,7 +147,7 @@ section.hero{
     &::before{
       content: "";
       display: block;
-      background: url('../images/gradient-dots-grid.svg') no-repeat top/contain;
+      background: url('../assets/gradient-dots-grid.svg') no-repeat top/contain;
       position: absolute;
       right: -82px;
       top: -79px;
@@ -160,7 +160,7 @@ section.hero{
 
 // Projects
 section.projects{
-  background: url('../images/projects-bg.svg') no-repeat center top / cover;
+  background: url('../assets/projects-bg.svg') no-repeat center top / cover;
   padding-top: 30px;
   nav{
     padding-left: 24px;
